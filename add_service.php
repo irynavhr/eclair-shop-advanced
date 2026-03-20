@@ -1,0 +1,93 @@
+<?php
+session_start();
+// CONNECT TO FILE WITH DB CONNECTION - PDO
+require_once 'includes/db.php';
+require_once 'classes/Service.php';
+
+// CHECK WEATHRE USER == ADMIN
+if (!isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
+    header('Location: index.php');
+    exit();
+}
+
+// CREATE NEW SERVICE OBJECT
+$service = new Service($pdo);
+
+// FORM WAS SENT
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $title = $_POST['title'];
+    $desc = $_POST['description'];
+    $keywords = $_POST['keywords'];
+    $category = $_POST['category'];
+    $img = $_POST['image'];
+    $price = $_POST['price'];
+    
+
+
+
+    // CREATE NEW ECLAIR
+    if ($service->create($title, $desc, $img, $keywords, $category, $price)) {
+        header("Location: service_dashboard.php");
+        exit();
+    } else {
+        echo "Error adding service.";
+    }
+}
+?>
+
+<!-- PAGE STRUCTURE________________________________________________________________________________________________ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Add service</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body class="container py-5">
+        <h1>Add a new service</h1>
+        <form method="POST" action="add_service.php">
+            <!-- ECLAIR NAME -->
+            <div class="mb-3">
+                <label for="title" class="form-label">Name</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+            <!-- ECLAIR DESCRIPTION -->
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description" required></textarea>
+            </div>
+            <!-- KEYWORDS -->
+            <div class="mb-3">
+                <label for="keywords" class="form-label">Keywords</label>
+                <input type="text" class="form-control" id="keywords" name="keywords" required>
+            </div>
+
+            <!-- CATEGORY -->
+            <div class="mb-3">
+                <label for="category" class="form-label">Category</label>
+                <input type="text" class="form-control" id="category" name="category" required>
+            </div>
+            <!-- PRICE -->
+            <!-- <div class="mb-3">
+                <label for="price" class="form-label">Price (€)</label>
+                <input type="number" step="0.01" class="form-control" id="price" name="price" required>
+            </div> -->
+            <!-- PRICE -->
+            <div class="mb-3">
+                <label for="price" class="form-label">Price (€)</label>
+                <input type="number" class="form-control" id="price" name="price" required>
+            </div>
+
+            <!-- ECLAIR IMG -->
+            <div class="mb-3">
+                <label for="image" class="form-label">Image URL</label>
+                <input type="text" class="form-control" id="image" name="image" required>
+            </div>
+
+            <!-- UPDATE BUTTON -->
+            <button type="submit" class="btn btn-success">Add</button>
+        </form>
+        <!-- BACK BUTTON -->
+        <a href="service_dashboard.php" class="btn btn-secondary mt-3">Back</a>
+    </body>
+</html>

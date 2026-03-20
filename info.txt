@@ -1,0 +1,79 @@
+MAIN PAGES:
+http://localhost/assignment-clair-22-05/
+http://localhost/assignment-clair-22-05/index.php
+http://localhost/assignment-clair-22-05/about.html
+http://localhost/assignment-clair-22-05/services.php
+http://localhost/assignment-clair-22-05/contact.php
+
+lOG IN/OUT / SIGN UP
+http://localhost/assignment-clair-22-05/public/login.html
+http://localhost/assignment-clair-22-05/public/register.html
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+1. add button to cart in navbar 
+2. upload data about orders into db
+3. add admin dashboard to veiw ORDERS
+4. add page for and order -- by click in admin dashboard on current order
+
+SMALL BUGS:
+---highlighting currant page in nav bar
+---reactive search
+---navebar update
+
++ adress, payment
++ purchcase history for user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---add possibitity to change img of eclair   ---solved
+-- WHY MESSAGES DASHBORD EMPTY? WHY IN DB NO DATA? -----solved
+-- BUTTONS FOR ALL DASHBOARDS -- solved
+-- FIX DARK MODE ON LOG IN AND REGISTER PAGES   -- partly solved
+-- why there no eclairs???????? -- solved
+-- edit eclair button in servises does not represented in admin --- solved
+-- dynamic categories  -- solved
+-- ! highlighting currant page in nav bar
+-- ! JS IN SERVICES.PHP - DOESNT USEED    --- solved
+-- ! CREATE EDITPROFILE.PHP IN PUBLIC FOLDER   make it for all users
+-- ! add possibitity to change img of eclair
+-- ! reactive search
+-- ! page movement on services  --  PAGE ANIMATION --- solved

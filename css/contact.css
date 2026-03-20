@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+header{
+    opacity: 0.85;
+}
+body{
+    font-family: 'Hammersmith One', sans-serif;
+}
+.background{
+    background-image: url('../images/fon.jpg') !important;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    background: url('../images/fon.jpg') no-repeat center center;
+    background-size: cover;
+    filter: blur(5px) brightness(0.85); 
+    z-index: -1; 
+    pointer-events: none; 
+}
+p.headtext{
+    font-size: 17px;
+    text-align: center;
+    flex-wrap: wrap; 
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.34), 0px 0px 25px rgba(255, 255, 255, 0.34);
+}
+.form-container{
+    margin-top: 35px;
+    margin-bottom: 50px;
+    gap: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: center;
+}
+.form-group{
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap; 
+    flex-direction: column;
+    align-items: flex-start;
+}
+label{
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 7px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.183), 0px 0px 25px rgba(255, 255, 255, 0.183);
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    background-color: #fcf6db;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+}
+input:hover, textarea:hover{
+    box-shadow: 0px 0px 4.5px rgba(0, 0, 0, 0.2);
+}
+#message{
+    height: 70px;
+    resize: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+.button {
+    margin-top: 12px;
+    font-weight: 550;
+    font-size: 13px;
+    padding: 10px 20px;
+    background-color: #d7c9a2;
+    color: rgb(7, 7, 7);
+    font-family: 'Hammersmith One', sans-serif;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.183), 0px 0px 25px rgba(255, 255, 255, 0.183);
+}
+.button:hover{
+    box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+}
+.under{
+    opacity: 0.7;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.183), 0px 0px 25px rgba(255, 255, 255, 0.183);
+}
+@media (max-width: 768px) {  
+    body {  
+      font-size: 14px;  
+    }  
+}  
+@media (max-width: 480px) {  
+    body {  
+      font-size: 12px;  
+    }  
+}

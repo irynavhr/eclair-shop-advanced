@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+:root {
+    --primary-color: #88411E;
+    --secondary-color: #AA7841;
+    --text-color: #2b2b2b;
+   
+    --background-color: #fefeed;
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+    font-family: Arial, sans-serif;
+}
+
+.nav-bar-btn-color{
+    background: var(--secondary-color);
+}
+.color{
+    background-color: var(--secondary-color);
+}
+.header-bs {
+    background: var(--secondary-color);
+    padding: 0px;
+    text-align: center; 
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    z-index: 100;
+    text-transform: uppercase;
+}
+header a {
+    color: white;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 18px;
+}
+header a:hover {
+    font-weight: bold;
+}
+
+
+
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1; 
+    justify-content: space-between;
+}
+
+.welcome-section {
+  background-color: #fff8dc; /* Ніжно-жовтий фон для секції */
+  text-align: center; /* Вирівнюємо iframe по центру */
+  padding: 30px 0; /* Відступ зверху і знизу */
+}
+
+.welcome-section iframe {
+  background-color: transparent; /* Прозорий фон самого iframe */
+  width: 70%; /* Зробити iframe трохи меншим */
+  height: 200px; /* Висота */
+  border: none; /* Без рамки */
+}
+
+main {
+    flex: 1; 
+    padding: 0px;
+    color: var(--text-color); 
+    display: flex;
+    flex-direction: column;
+}
+  
+  /* 🌙 Темна тема */
+  body.dark-theme {
+    --primary-color: #ffffff;
+    --secondary-color: #2b2b2b;
+    --text-color: #ffffff;
+    --background-color: #242222;
+  }
+/* footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+    font-size: 14px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+} */
+
+footer {
+    background-color: #AA7841;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    padding: 20px;
+    transition: background-color 0.3s ease; /* 👈 забезпечує анімацію */
+  }
+  
+  footer:hover {
+    background-color: #88411E; /* 👈 темніший відтінок */
+  }
+  
+
+@media (max-width: 1024px) {
+    header {
+        gap: 30px;
+    }
+}
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap; 
+        gap: 10px;
+        padding: 10px;
+    }
+}
+
+.navbar.scrolled {
+    background-color: #5C3A21; /* ← Темно-коричневий */
+    transition: background-color 0.3s ease;
+  }
+  /* ✅ Змінює фон всередині меню (меню-контейнеру) при scroll */
+.navbar.scrolled .header-bs {
+    background-color: #5C3A21; /* Темно-коричневий, такий самий як у navbar */
+    transition: background-color 0.3s ease;
+  }
+
+  .navbar-toggler {
+    background-color: #AA7841;
+    border: none;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* 🔘 Після scroll – темно-коричнева */
+  .navbar.scrolled .navbar-toggler {
+    background-color: #5C3A21;
+    color: white;
+  }
+
+  /* Зміна кольору іконки (спан всередині кнопки) */
+.navbar.scrolled .navbar-toggler span {
+    color: white !important;
+  }
+/* 🟢 Базова кнопкова стилізація */
+.navbar .nav-link {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+  }
+  
+  /* 🟡 Кнопки при наведенні */
+  .navbar .nav-link:hover {
+    background-color: #f2e0c5;
+    color: #88411E;
+    text-decoration: none;
+  }
+  
+  /* 🔵 Після scroll */
+  .navbar.scrolled .nav-link {
+    color: white !important;
+  }
+  
+  /* 🔵 Hover у scroll-стані */
+  .navbar.scrolled .nav-link:hover {
+    background-color: #ffe2c2 !important;
+    color: #88411E !important;
+  }
+  
+  /* ✅ Активна сторінка */
+  .active {
+  color: red;
+  }
+  
+  /* ✅ На мобілках (тільки) зробити вигляд кнопки */
+  @media (max-width: 991.98px) {
+    .navbar .nav-link {
+      display: block;
+      width: 100%;
+      margin: 4px 0;
+      background-color: #fefeed;
+      border: 1px solid #AA7841;
+      color: #88411E;
+    }
+  /* Робить кнопку як посилання */
+/* #theme-toggle.nav-link {
+    font-weight: normal;
+    color: #2b2b2b;
+  }
+  
+  У hover-стані
+  #theme-toggle.nav-link:hover {
+    background-color: #f2e0c5;
+    color: #88411E;
+  } */
+    .navbar .nav-link:hover {
+      background-color: #ffffff;
+      color: #AA7841 !important;
+    }
+  
+    .navbar.scrolled .nav-link {
+      background-color: transparent;
+      border: 1px solid white;
+      color: white !important;
+    }
+  
+    .navbar.scrolled .nav-link:hover {
+      background-color: white;
+      color: #AA7841 !important;
+    }
+  }
+ /* 🌙 Темна тема */
+body.dark-theme {
+    background-color: #222020;
+    color: #f0f0f0;
+  }
+  
+  body.dark-theme .navbar,
+  body.dark-theme .navbar.scrolled {
+    background-color: #333333;
+  }
+  
+  body.dark-theme .navbar .nav-link {
+    color: #5d5d5d;
+  }
+  
+  body.dark-theme .navbar .nav-link:hover {
+    background-color: #444;
+    color: #ffffff;
+  }
+  
+  body.dark-theme footer {
+    background-color: #2a2a2a;
+    color: #dddddd;
+  }
+  
+  body.dark-theme .header-bs {
+    background-color: #333333;
+  }
+  body, .navbar, .nav-link, footer {
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  /* Темна тема: змінити колір фону меню */
+body.dark-theme .header-bs {
+    background-color: #333333 !important; /* або #000 / #222 — як хочеш */
+    transition: background-color 0.3s ease;
+  }
+
+
+
+/* Floating button that stays in bottom-right corner */
+.floating-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.floating-btn .btn {
+  padding: 12px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  background-color: #AA7841;
+  border-color: #AA7841;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.floating-btn .btn:hover {
+  background-color: #88411E;
+  border-color: #88411E;
+}
+
+  .btn-primary {
+  background-color: #AA7841;
+  border-color: #AA7841;
+  color: white;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #88411E;
+  border-color: #88411E;
+}
+
+/* Вимкнути збільшення при наведенні */
+.btn,
+button {
+  transform: none !important;
+  font-weight: 10 !important;
+  transition: 0.01 !important;
+}
+  

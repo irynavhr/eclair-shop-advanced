@@ -1,0 +1,51 @@
+[
+{
+    "title": "Classic Vanilla Éclair",
+    "description": "Delicate custard cream with natural vanilla",
+    "image": "images/vanilla.jpg",
+    "keywords": "vanilla custard",
+    "category": "classic",
+    "price": 1.20
+    
+  },
+  {
+    "title": "Champagne & Strawberry Éclair",
+    "description": "Flavor with champagne and strawberry mousse",
+    "image": "images/strawbery.jpg",
+    "keywords": "strawberry champagne fruit",
+    "category": "fruit",
+    "price": 1.70
+  },
+  {
+    "title": "Chocolate Éclair",
+    "description": "Dark Belgian chocolate with rich chocolate cream",
+    "image": "images/chocolate.jpg",
+    "keywords": "chocolate",
+    "category": "chocolate",
+    "price": 2.25
+  },
+  {
+    "title": "Berry Éclair",
+    "description": "Raspberry, blueberry, and whipped cream",
+    "image": "images/berries.jpg",
+    "keywords": "berry raspberry blueberry fruit",
+    "category": "fruit",
+    "price": 2.05
+  },
+  {
+    "title": "Salted Caramel Éclair",
+    "description": "Caramel cream with sea salt",
+    "image": "images/salt_caramel.jpg",
+    "keywords": "caramel salted",
+    "category": "classic",
+    "price": 1.90
+  },
+  {
+    "title": "Pistachio Éclair",
+    "description": "Pistachio cream and nutty notes",
+    "image": "images/phistachew.jpg",
+    "keywords": "pistachio nut",
+    "category": "nutty",
+    "price": 3.23
+  }
+]
