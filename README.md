@@ -1,5 +1,5 @@
 # Eclair Project 🍰  
-A website for an imaginary confectionery shop.
+A website for an imaginary confectionery shop.  - in development
 
 ## Project Description
 
