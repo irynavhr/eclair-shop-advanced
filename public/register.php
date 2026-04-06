@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 session_start();
 // CONNECT TO FILE WITH DB CONNECTION - PDO
 require_once '../includes/db.php';
@@ -37,6 +39,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->bindParam(':password', $hashed_password);
     $stmt->bindParam(':role', $role);
     $stmt->execute();
+
+
 
     // STORE USERNAME IN SESSION AND STORE COOKIE
     $_SESSION['username'] = $username;

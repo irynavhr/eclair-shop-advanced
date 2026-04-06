@@ -5,6 +5,8 @@ $dbname = 'eclairdb';
 $username = 'iryna';  
 $password = 'chocolade';  
 
+// mysql -u iryna -p -h localhost eclairdb
+// echo "CONFIG LOADED";
 // CONNECTION TO A DATABASE
 try {
     // CONNECTION TO A DATABASE VIA PDO

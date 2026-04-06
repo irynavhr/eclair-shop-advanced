@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 session_start(); // START SESSION TO ACCESS USER DATA AND CART
 
 // IF USER IS NOT LOGGED IN, REDIRECT TO LOGIN PAGE WITH MESSAGE
